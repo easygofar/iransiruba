@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import _ from "lodash";
+// import _ from "lodash";
+import { sortBy } from "@/lib";
+
 // import { machines} from "../data/machines";
 import useNextBlurhash from "use-next-blurhash";
 // import { catalogues } from "../data/machines";
@@ -62,7 +64,7 @@ const renderMachineSections = async () => {
   const machines: any[] = getData();
   // machines.push(catalogues[0]);
 
-  return _.sortBy(machines, ["id"]).map((m: IfMachineType) => (
+  return sortBy(machines, ["id"]).map((m: IfMachineType) => (
     <span key={m.id} className="m-0 p-0 w-full">
       <section
         key={m.id}
@@ -120,7 +122,7 @@ const renderMachineSections = async () => {
                     key={index}
                     className="relative group mr-4 w-[90%] text-blue-500 hover:underline cursor-pointer text-reg hover:font-bold flex items-end"
                   >
-                    <span className="absolute -top-[5px] duration-200 transiton-all group-hover:-top-[2px] -right-[8px] inline-block group-hover:after:content-['\2193'] text-[#fa461e]"></span>
+                    <span className="absolute -top-1.25 duration-200 transiton-all group-hover:-top-0.5 -right-2 inline-block group-hover:after:content-['\2193'] text-[#fa461e]"></span>
                     <span className="text-sm sm:text-reg">{text}</span>
                   </span>
                 ))}
@@ -143,7 +145,7 @@ const Downloads = () => {
   const [blurDataUrl] = useNextBlurhash("LEHV6nWB2yk8pyo0adR*.7kCMdnj");
   return (
     <div>
-      <section className={`relative aspect-[16/4] border bg-top`}>
+      <section className={`relative aspect-16/4 border bg-top`}>
         <Image
           src="/images/downloads.jpg"
           className="object-cover lg:object-fill  object-top"

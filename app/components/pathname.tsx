@@ -4,7 +4,9 @@ import { usePathname } from "next/navigation"
 import Link from 'next/link'
 // import { machines } from "../data/machines"
 import { getCategory } from "../../utils/functions"
-import _ from 'lodash'
+// import _ from 'lodash'
+import { sortBy } from "@/lib";
+
 import { IfMachineType } from "../../utils/types"
 
 interface Props {
@@ -17,7 +19,7 @@ const Pathname = ({ machines }: Props) => {
 	const arr = pathname.trim().split("/")
 	arr.pop()
 	arr.shift()
-	const machine = _.sortBy(machines, ['id']).filter((m: any) => getCategory(m.category) === arr[1])
+	const machine = sortBy(machines, ["id"]).filter((m: any) => getCategory(m.category) === arr[1])
 	const path = machine[0]?.farsi
 
 	return (

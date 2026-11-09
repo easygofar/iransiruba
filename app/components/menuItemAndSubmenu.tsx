@@ -1,10 +1,11 @@
-import _ from "lodash";
+// import _ from "lodash";
 import Link from "next/link";
 
 import MobileSubMenuHeadNoLink from "./mobileSubMenuHeadNoLink";
 import MobileSubMenuHeadLink from "./mobileSubMenuHeadLink";
 import { Down, Left, Less } from "../components/menu/signs";
 import { getCategory } from "../../utils/functions";
+import { sortBy } from "@/lib";
 
 interface Props {
   menuMainName: string;
@@ -51,7 +52,7 @@ function MenuItemAndSubmenu({
           sm:min-w-62.5 min-w-45 flex flex-col md:top-17 w-full top-7.5 md:right-[50%] md:translate-x-[50%] 
           md:border-2 border-slate-300 right-[50%] bg-slate-200/50 rounded-md p-0 hidden z-100`}
       >
-        {_.sortBy(menuData, ["id"]).map((m: any) => (
+        {sortBy(menuData, ["id"]).map((m: any) => (
           <li
             key={m.id}
             className={`table border-b border-slate-200 py-[0.2rem] bg-white hover:bg-slate-200 hover:font-bold ${m.models.length > 1
@@ -147,7 +148,7 @@ function MenuItemAndSubmenu({
                   hidden md:mr-0.5 invisible hover:block md:right-full 
                   md:mb-2 mb-1 drop-shadow md:px-0 pr-2 bg-white 
                   border-2 md:border-2 md:shadow-md md:border-slate-200 md:rounded-md rounded-sm border-b border-slate-3  00 sm:w-70 w-50 z-100`}>
-                  {_.sortBy(m.models, ["id"]).map((model: any) => {
+                  {sortBy(m.models, ["id"]).map((model: any) => {
                     return (
                       <li
                         key={model.id}

@@ -23,12 +23,12 @@ const Warning = ({ children }: { children: string }) => {
 const Icon = ({ name }: { name: string }) => {
   return (
     <span
-      className={`relative md:w-[48px] md:h-[48px] w-[18px] p-[18px] mx-2 md:mx-0 flex items-center justify-center border border-gray-300 md:border-red-500 rounded-full group-hover:scale-110 transition-all duration-200 bg-white`}
+      className={`relative md:w-12 md:h-12 w-4.5 p-4.5 mx-2 md:mx-0 flex items-center justify-center border border-gray-300 md:border-red-500 rounded-full group-hover:scale-110 transition-all duration-200 bg-white`}
     >
       <Image
         src={`/icons/${name}`}
         fill={true}
-        className="object-contain md:p-[10px] p-[10px]"
+        className="object-contain p-2.5"
         alt="icon"
       />
     </span>
@@ -240,7 +240,7 @@ const ContactClient = () => {
                   <button
                     type="submit"
                     onClick={handleOnSubmit}
-                    className="transition-all duration-200 py-[0.375rem] px-[1.2rem] border-2 flex items-center  bg-blue-500 hover:bg-blue-600 text-white text-reg rounded-md"
+                    className="transition-all duration-200 py-1.5 px-[1.2rem] border-2 flex items-center  bg-blue-500 hover:bg-blue-600 text-white text-reg rounded-md"
                     disabled={isLoading}
                   >
                     ارسال
@@ -273,7 +273,7 @@ const ContactClient = () => {
               id="map"
               className="relative w-full lg:w-1/2 h-full hidden sm:block rounded-lg border-0"
             >
-              <span className="top-[50%] left-[50%] border-2 border-blue-900 bg-blue-500 absolute animate-ping w-2 h-2 rounded-full ring-blue-500 z-[40] opacity-75"></span>
+              <span className="top-[50%] left-[50%] border-2 border-blue-900 bg-blue-500 absolute animate-ping w-2 h-2 rounded-full ring-blue-500 z-40 opacity-75"></span>
               <iframe
                 src="https://balad.ir/embed?p=PX2Xpbwr1H2L6k"
                 title="مشاهده «ساختمان تجاری و اداری سجاد» روی نقشه بلد"

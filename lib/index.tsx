@@ -98,3 +98,58 @@ export function getCategoryJsonLd(MachineId: string) {
     )
   };
 }
+
+
+
+/**
+ * مرتب‌سازی آرایه بر اساس یک یا چند مشخصه / تابع iteratee
+ * @param {Array} collection - آرایه ورودی
+ * @param {Array|Function|string} iteratees - کلید یا توابعی که بر اساس آنها سورت انجام می‌شود
+ * @returns {Array} - آرایه سورت‌شده جدید (Immutable)
+ */
+export function sortBy(
+  collection: any,
+  iteratees: (string | ((item: any) => any))[] | string | ((item: any) => any) = [(item: any) => item]
+) {
+  if (!Array.isArray(collection)) return [];
+
+  // تبدیل آرگومان به آرایه در صورتی که یک رشته یا تابع تک پاس داده شده باشد
+  const criteria = Array.isArray(iteratees) ? iteratees : [iteratees];
+
+  // تبدیل مقادیر رشته‌ای به توابع استخراج فیلد
+  const resolvedCriteria = criteria.map(criterion => {
+    if (typeof criterion === 'function') return criterion;
+    if (typeof criterion === 'string') return (item: any) => item?.[criterion];
+    return (item: any) => item;
+  });
+
+  // ایجاد یک کپی سطحی از آرایه تا آرایه اصلی دست‌نخورده باقی بماند
+  return [...collection].sort((a, b) => {
+    for (const criterion of resolvedCriteria) {
+      const valA = criterion(a);
+      const valB = criterion(b);
+
+      if (valA === valB) continue;
+
+      // مدیریت مقادیر null یا undefined (انتقال به انتهای لیست)
+      if (valA == null) return 1;
+      if (valB == null) return -1;
+
+      // مقایسه رشته‌ها یا اعداد
+      if (valA > valB) return 1;
+      if (valA < valB) return -1;
+    }
+    return 0;
+  });
+}
+
+
+/**
+ * حذف عناصر تکراری از یک آرایه ساده
+ * @param {Array} array 
+ * @returns {Array}
+ */
+export function uniq(array: any) {
+  if (!Array.isArray(array)) return [];
+  return [...new Set(array)];
+}

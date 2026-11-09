@@ -19,13 +19,13 @@ const LeftElement = ({ children, year }: Props) => {
         {/* arrow wrapper */}
         <div className="arrow-wrapper absolute sm:w-[40%] w-[70%] rounded-md sm:rounded-lg bg-[#ffffff] z-[50] sm:left-0">
           {/* arrow */}
-          <span className="absolute top-[17px] z-[10] rotate-45 bg-[#ffffff] border-l-1 sm:border-t-1 sm:right-[-5px] left-[-3px] sm:h-[15px] sm:w-[15px] h-[12px] w-[12px]"></span>
+          <span className="absolute top-4.25 z-10 sm:rotate-135 rotate-45 bg-[#ffffff] border-l sm:border-t-1 sm:right-[-5px] left-[-3px] sm:h-[15px] sm:w-[15px] h-[12px] w-[12px]"></span>
         </div>
         {/* calendar days icon */}
-        <div className="work-icon absolute sm:top-0 top-[7px] sm:left-[50%] left-[3px] sm:translate-x-[-50%] sm:w-[49px] sm:h-[49px] w-[32px] h-[32px] rounded-full bg-[#F9461C] flex justify-center items-center ring-[1px] ring-offset-2 ring-offset-blue z-[50]">
+        <div className="work-icon absolute sm:top-0 top-1.75 sm:left-[50%] left-0.75 sm:translate-x-[-50%] sm:w-[49px] sm:h-[49px] w-[32px] h-[32px] rounded-full bg-[#F9461C] flex justify-center items-center ring-[1px] ring-offset-2 ring-offset-blue z-[50]">
           <CalendarIcon />
           {/* year */}
-          <span className="absolute text-shadow top-[50%] sm:text-reg translate-y-[-50%] z-[30] sm:right-[-60px] left-[38px] font-bold text-reg select-none">
+          <span className="absolute text-shadow top-[50%] sm:text-reg translate-y-[-50%] z-30 sm:right-[-60px] left-[38px] font-bold text-reg select-none">
             {year}
           </span>
         </div>

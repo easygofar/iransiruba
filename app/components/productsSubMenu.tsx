@@ -1,5 +1,7 @@
 import Link from "next/link";
-import _ from "lodash";
+// import _ from "lodash";
+import { sortBy } from "@/lib";
+
 import { getCategory } from "../../utils/functions";
 import { getData } from "../../lib";
 import { More, Less, Left } from "../components/menu/signs";
@@ -22,7 +24,7 @@ export default async function ProductSubMenu({
   const machines = getData();
   console.log("machines====>", machines);
 
-  return _.sortBy(machines, ["id"]).map((m: any) => (
+  return sortBy(machines, ["id"]).map((m: any) => (
     <li
       key={m.id} //md:transition-none
       className={`table border-b border-slate-200 py-[0.2rem] bg-white hover:bg-slate-200 hover:font-bold ${m.models.length > 1
@@ -96,7 +98,7 @@ export default async function ProductSubMenu({
       {m.models.length > 1 ? (
         <div className="md:animate-none">
           <ul className="relative md:absolute animate-fade-in-scale md:animate-fade-in-right porduct-details top-2 md:top-0 hidden md:mr-0.5 invisible hover:block md:right-full md:mb-2 mb-1 drop-shadow md:px-0 pr-2 bg-white border md:border md:shadow-md md:border-slate-200 md:rounded-md rounded-sm border-none sm:w-70 w-50 z-100">
-            {_.sortBy(m.models, ["title"]).map((sub: any) => (
+            {sortBy(m.models, ["title"]).map((sub: any) => (
               <li
                 key={sub.title}
                 className="border-b py-[0.15rem] sm:py-1 hover:block w-full bg-white hover:bg-slate-200/75"

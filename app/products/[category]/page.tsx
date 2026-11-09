@@ -1,6 +1,7 @@
 import { Metadata } from "next";
-import _ from "lodash";
+// import _ from "lodash";
 // import { machines } from "../../data/machines";
+
 import { getCategory } from "../../../utils/functions";
 import { notFound } from "next/navigation";
 import ModelCard from "../../components/modelCard";
@@ -8,7 +9,7 @@ import SideList from "../../components/sideList";
 import DownloadResources from "../../components/downloadResources";
 import Pathname from "../../components/pathname";
 import { IfMachineType, IfModelType } from "../../../utils/types";
-import { getData, getCategoryJsonLd } from "../../../lib";
+import { getData, getCategoryJsonLd, uniq } from "../../../lib";
 
 function truncate(str: string, n: number) {
   return str.length > n ? str.slice(0, n - 1) + "&hellip;" : str;
@@ -118,7 +119,7 @@ const ProductCategory = async ({
   models.forEach((model) => {
     categories.push(model.sub_category);
   });
-  const uniqValueCategories = _.uniq(categories);
+  const uniqValueCategories = uniq(categories);
 
   const newList: { title: string; models: IfModelType[] }[] = [];
   uniqValueCategories.forEach((item) => {

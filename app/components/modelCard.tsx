@@ -25,7 +25,7 @@ const ModelCard = ({
   const [blurDataUrl] = useNextBlurhash("LEHV6nWB2yk8pyo0adR*.7kCMdnj");
   const details = detail + "-" + "چرخ خیاطی صنعتی" + "-" + "سیروبا";
   return (
-    <div className="group bg-white border-[#e0e0e0] sm:w-75 w-62.5 rounded-[5px] overflow-hidden border-x-[1px] z-100 hover:ring-slate-300/50 hover:ring  hover:ring-offset-4 flex flex-col items-center border sm:mb-8 mb-2 border-y-4 border-y-[#FA461C] p-0">
+    <div className="group bg-white border-[#e0e0e0] sm:w-75 w-62.5 rounded-[5px] overflow-hidden border-x z-100 hover:ring-slate-300/50 hover:ring  hover:ring-offset-4 flex flex-col items-center border sm:mb-8 mb-2 border-y-4 border-y-[#FA461C] p-0">
       <div className="flex justify-center w-full h-auto overflow-hidden">
         <Image
           src={`/images/siruba-swing-machines/webp_tn_${image.split(".")[0]
@@ -58,7 +58,7 @@ const ModelCard = ({
             ? details.split("-").map((p, index) => (
               <span
                 key={p + index}
-                className="px-[0.5rem] m-[0.13rem] bg-slate-200 rounded-full"
+                className="px-2 m-[0.13rem] bg-slate-200 rounded-full"
               >
                 {p}
               </span>

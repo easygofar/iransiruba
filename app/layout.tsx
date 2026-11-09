@@ -99,17 +99,17 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className="sm:leading-8 leading-6 font-extralight">
 
         <main className="relative bg-[#ffffff] min-h-screen flex flex-col items-center p-0 m-0 w-full">
-          <div className="relative w-full h-[40px] bg-[#000000] p-0 m-0 flex justify-center">
-            <div className="absolute top-0 z-[100] xl:w-[1250px] sm:w-[85%] w-[96%]  h-[40px] bg-[#000000] flex flex-row sm:justify-end justify-center items-center m-0 p-0">
+          <div className="relative w-full h-10 bg-[#000000] p-0 m-0 flex justify-center">
+            <div className="absolute top-0 z-100 xl:w-312.5 sm:w-[85%] w-[96%]  h-10 bg-[#000000] flex flex-row sm:justify-end justify-center items-center m-0 p-0">
               <TopHeaderInto />
             </div>
-            <div className="absolute z-[310] w-full top-0 h-[40px] flex justify-center shadow-bottom"></div>
+            <div className="absolute z-310 w-full top-0 h-10 flex justify-center shadow-bottom"></div>
           </div>
-          <section className="relative xl:w-[1250px] sm:w-[85%] w-[96%] flex flex-col items-center">
+          <section className="relative xl:w-312.5 sm:w-[85%] w-[96%] flex flex-col items-center">
             <MenuResponsive />
 
             <section className="w-full mb-10 p-1 bg-white shadow-md">
-              <div className="w-full flex flex-col z-[50]">{children}</div>
+              <div className="w-full flex flex-col z-50">{children}</div>
             </section>
           </section>
         </main>

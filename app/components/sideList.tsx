@@ -1,16 +1,18 @@
 "use client"
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import _ from "lodash";
+// import _ from "lodash";
+import { sortBy } from "@/lib";
+
 // import { machines } from "../data/machines";
 import { getCategory } from "../../utils/functions";
 import { IfMachineType } from "../../utils/types"
 
 interface Props {
-	 machines: IfMachineType[] ;
+	machines: IfMachineType[];
 }
 
-const SideList = ({machines}:Props) => {
+const SideList = ({ machines }: Props) => {
 	const pathname = usePathname()
 
 	return (
@@ -20,7 +22,7 @@ const SideList = ({machines}:Props) => {
 					چرخ خیاطی‌های صنعتی سیروبا
 				</h2>
 				<ul className="flex flex-wrap w-full justify-around">
-					{_.sortBy(machines, ["id"]).map((item: any) => {
+					{sortBy(machines, ["id"]).map((item: any) => {
 						const bgSelectedToggle = pathname.split("/")[2] === getCategory(item.category)
 							? "bg-red-300/25"
 							: "bg-white";
