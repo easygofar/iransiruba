@@ -51,7 +51,7 @@ export function getProductJsonLd(MachineId: string, ModelId: string) {
       },
     },
     "sku": model.title,
-    "additionalProperty": model.technical_specs.map((spec) => ({
+    "additionalProperty": (model.technical_specs ?? []).map((spec) => ({
       "@type": "PropertyValue",
       name: spec.label,
       value: spec.value,
@@ -60,7 +60,7 @@ export function getProductJsonLd(MachineId: string, ModelId: string) {
 }
 
 export function getCategoryJsonLd(MachineId: string) {
-  const machine = machines.find((item) => item.id === MachineId);
+  const machine = machines.find((item) => String(item.id) === MachineId);
 
   return {
     "@context": "https://schema.org",

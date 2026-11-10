@@ -13,9 +13,6 @@ interface Props {
 
 const DownloadResources = async ({ category, model }: Props) => {
   const machines = getData();
-  // console.log("machines.length", machines.length);
-  // const {data} = await getData();
-  // const machines = convertToJson(data);
 
   const machine = machines.find(
     (machine) => getCategory(machine.category) === category

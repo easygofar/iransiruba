@@ -22,7 +22,6 @@ export default async function ProductSubMenu({
   setIsOpen,
 }: Props) {
   const machines = getData();
-  console.log("machines====>", machines);
 
   return sortBy(machines, ["id"]).map((m: any) => (
     <li

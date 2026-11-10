@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
-// import _ from "lodash";
 import { sortBy } from "@/lib";
 
+// import _ from "lodash";
 // import { machines} from "../data/machines";
-import useNextBlurhash from "use-next-blurhash";
 // import { catalogues } from "../data/machines";
+
+import useNextBlurhash from "use-next-blurhash";
 import { IfMachineType } from "../../utils/types";
 import { getData } from "../../lib";
 import { getCategory } from "../../utils/functions";
@@ -84,15 +85,18 @@ const renderMachineSections = async () => {
         >
           {m.models.map((mo, index) => {
             const resource_id = mo.resource_id;
-            const resources = m.resources
-              .filter((r) => r.id === resource_id)[0]
-              .downloads.map((download) => (
-                <React.Fragment key={download.label}>
-                  {renderDownloads(download)}
-                </React.Fragment>
-              ));
+            // const resources = m.resources.filter((r) => r.id === resource_id)[0].downloads.map((download) => (
+            //   <React.Fragment key={download.label}>
+            //     {renderDownloads(download)}
+            //   </React.Fragment>
+            // ));
+            const downloadsList = m.resources?.find((r) => r.id === resource_id)?.downloads ?? [];
+            const resources = downloadsList.map((download) => (
+              <React.Fragment key={download.label}>
+                {renderDownloads(download)}
+              </React.Fragment>))
             return (
-              <li key={mo.id + index}
+              <li key={mo.id + String(index)}
                 className="sm:mx-2 flex flex-col my-2 md:my-4 pb-4 lg:w-70 md:w-1/3 w-full items-start border border-slate-300 border-b-slate-400 rounded-md"
 
               >

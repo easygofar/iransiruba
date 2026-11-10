@@ -208,7 +208,7 @@ export const machines = [
           { id: "b7", label: "کاتر اتومات", value: "دارد" },
           { id: "b4", label: "عرض دوخت", value: "0~5 میلیمتر" },
           { id: "b21", label: "نوع سوزن", value: "DA×1  #14" },
-          { id: "b9", label: "سرعت موتور", value: "4500 RPM" },
+          { id: "b2", label: "سرعت موتور", value: "4500 RPM" },
         ],
       },
 
@@ -678,7 +678,7 @@ export const machines = [
           { id: "b21", label: "نوع سوزن", value: "DCX27 #11" },
           { id: "b4", label: "عرض دوخت", value: "4.2 میلیمتر" },
           { id: "b7", label: "ارتفاع پایه", value: "5 میلیمتر" },
-          { id: "b9", label: "سرعت موتور", value: "5500 RPM" },
+          { id: "b2", label: "سرعت موتور", value: "5500 RPM" },
         ],
       },
       {
@@ -717,7 +717,7 @@ export const machines = [
           { id: "b21", label: "نوع سوزن", value: "DCX27 #11" },
           { id: "b4", label: "عرض دوخت", value: "4.2 میلیمتر" },
           { id: "b7", label: "ارتفاع پایه", value: "5 میلیمتر" },
-          { id: "b9", label: "سرعت موتور", value: "5500 RPM" },
+          { id: "b23", label: "سرعت موتور", value: "5500 RPM" },
         ],
       },
       {

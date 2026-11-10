@@ -26,12 +26,12 @@ export interface IfModelType {
   id: string | number;
   resource_id?: string;
   title: string;
-  detail?: string;
+  detail: string;
   full_name?: string;
-  image?: string;
-  sub_category?: string;
+  image: string;
+  sub_category: string;
   menu_note?: string;
-  description?: string;
+  description: string;
   functions?: string[];
   application?: string[]; // 👈 حتما علامت سوال (?) بگذارید تا undefined را بپذیرد
   general_specs?: any[];

@@ -41,7 +41,10 @@ export const getCategory = (category: string | undefined): string => {
 export const SewingMachineIcon = GiSewingMachine;
 
 export const getMachineInfo = (machines: IfMachineType[], id: string) => {
-  return machines.filter((machine) => machine.id === id)[0] || [];
+  const filteredMachine = machines.filter(
+    (machine) => String(machine.id) === id,
+  )[0];
+  return filteredMachine;
 };
 
 export const getJwt = () => {
