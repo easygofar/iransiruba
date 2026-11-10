@@ -1,5 +1,7 @@
 // import { machines as data1 } from "../app/data/machines";
-import { machines } from "../../iransiriba- production14-2V1A   upgrade site - 02 SwiperJS - color/app/data/backup-machines";
+// import { machines } from "../../iransiriba- production14-2V1A   upgrade site - 02 SwiperJS - color/app/data/backup-machines";
+
+import { machines } from "@/app/data/machines";
 import { IfModelType } from "../utils/types";
 
 export function getData() {
@@ -19,7 +21,7 @@ export function removeHtmlTagsAndAttributes(input: string) {
 }
 
 export function getProductJsonLd(MachineId: string, ModelId: string) {
-  const machine = machines.find((item) => item.id === MachineId);
+  const machine = machines.find((item) => String(item.id) === String(MachineId));
   const model = machine?.models.find((item) => item.id === ModelId) as IfModelType | undefined;
   if (!model) {
     throw new Error(`Model with ID ${ModelId} not found`);
@@ -145,11 +147,18 @@ export function sortBy(
 
 
 /**
- * حذف عناصر تکراری از یک آرایه ساده
- * @param {Array} array 
- * @returns {Array}
+ * حذف عناصر تکراری از آرایه با حفظ ترتیب اولیه
+ * 
+ * @template T - نوع عناصر آرایه
+ * @param array - آرایه ورودی (می‌تواند Readonly باشد)
+ * @returns آرایه جدید بدون مقادیر تکراری
  */
-export function uniq(array: any) {
-  if (!Array.isArray(array)) return [];
-  return [...new Set(array)];
+export function uniq<T>(array: readonly T[] | null | undefined): T[] {
+  if (!array || !Array.isArray(array)) {
+    return [];
+  }
+
+  return Array.from(new Set(array));
 }
+
+

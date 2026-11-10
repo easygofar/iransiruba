@@ -17,7 +17,7 @@ const ListCategories = async () => {
       <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 md:my-8 sm:my-4 my-2">
         {machines.map((machine) => {
           return machine.id ? (
-            <Card key={machine.id} machines={machines} id={machine.id} />
+            <Card key={machine.id} machines={machines} id={String(machine.id)} />
           ) : null;
         })}
       </section>

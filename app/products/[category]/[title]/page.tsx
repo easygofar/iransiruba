@@ -142,7 +142,7 @@ const ModelTitle = async ({
 
   const { image, sub_category, description } = model;
 
-  const jsonLd = getProductJsonLd(machine.id, model.id);
+  const jsonLd = getProductJsonLd(String(machine.id), String(model.id));
 
 
   return (

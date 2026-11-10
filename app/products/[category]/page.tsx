@@ -128,7 +128,7 @@ const ProductCategory = async ({
   });
 
   const machineType = machine[0].category_title == "" ? 'چرخ خیاطی های' : 'دستگاه های'
-  const jsonLd = getCategoryJsonLd(machine[0].id)
+  const jsonLd = getCategoryJsonLd(String(machine[0].id));
 
   return (
     <>

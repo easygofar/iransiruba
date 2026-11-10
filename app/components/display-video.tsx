@@ -12,14 +12,35 @@ interface Props {
 const DisplayVideo = ({ label, link, fullpage }: Props) => {
   if (fullpage) {
     return (
-      <section className="w-full flex flex-col items-center justify-center">
-        <div className="relative flex flex-col items-center md:w-[80%] w-[95%] aspect-video bg-white rounded-md border-2   ">
-          <Iframe label={label} link={link} iconSize={28} autoPlay={false} />
-        </div>
-        <p className="sm:text-reg text-sm p-2 text-center w-full">{label}</p>
-      </section>
+      // <section className="w-full flex flex-col items-center justify-center">
+      //   <div className="relative flex flex-col items-center md:w-[80%] w-[95%] aspect-video bg-white rounded-md border-2   ">
+      //     <Iframe label={label} link={link} iconSize={28} autoPlay={false} />
+      //   </div>
+      //   <p className="sm:text-reg text-sm p-2 text-center w-full">{label}</p>
+      // </section>
+      <video
+        controls
+        width="100%"
+        preload="metadata"
+      >
+        <source src={link} type="video/mp4" />
+
+      </video>
+
     );
   }
+
+  // const DisplayVideo = ({ label, link, fullpage }: Props) => {
+  //   if (fullpage) {
+  //     return (
+  //       <section className="w-full flex flex-col items-center justify-center">
+  //         <div className="relative flex flex-col items-center md:w-[80%] w-[95%] aspect-video bg-white rounded-md border-2   ">
+  //           <Iframe label={label} link={link} iconSize={28} autoPlay={false} />
+  //         </div>
+  //         <p className="sm:text-reg text-sm p-2 text-center w-full">{label}</p>
+  //       </section>
+  //     );
+  //   }
 
   // return (
   //   <section className="flex flex-col items-center py-4 w-full">
