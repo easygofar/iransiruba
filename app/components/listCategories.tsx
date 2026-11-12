@@ -11,7 +11,7 @@ const ListCategories = async () => {
 
   return (
     <>
-      <h2 className="text-reg font-bold sm:text-reg md:text-xlg my-4 pt-8">
+      <h2 className="text-base font-bold sm:text-base md:text-xl my-4 pt-8">
         لیست چرخ خیاطی های صنعتی شرکت سیروبا
       </h2>
       <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 md:my-8 sm:my-4 my-2">

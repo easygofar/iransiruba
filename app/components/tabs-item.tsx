@@ -26,7 +26,7 @@ const TabsItem = ({ tabNumber, title, tab, setTab }: Props) => {
       <div className="flex flex-col lg:flex-row items-center justify-center sm:gap-2 lg:gap-4">
         {/* {icons[tabNumber - 1]} */}
         <span
-          className={`sm:text-reg text-sm text-center select-none ${tab === tabNumber
+          className={`sm:text-base text-sm text-center select-none ${tab === tabNumber
               ? "text-gray-900"
               : "text-blue-500 hover:text-blue-700"
             }`}

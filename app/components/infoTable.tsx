@@ -16,7 +16,7 @@ const InfoTable = ({ info }: Props) => {
   return (
     <>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table className="w-full text-sm sm:text-reg text-left text-blue-900">
+        <table className="w-full text-sm sm:text-base text-left text-blue-900">
           <tbody>
             {tableInfo.map((item) => {
               let cellValue = <span>{item.value}</span>;

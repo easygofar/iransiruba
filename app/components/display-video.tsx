@@ -17,7 +17,7 @@ const DisplayVideo = ({ label, link, fullpage }: Props) => {
         <div className="relative flex flex-col items-center md:w-[80%] w-[95%] aspect-video bg-white rounded-md border-2   ">
           <Iframex label={label} link={link} iconSize={28} autoPlay={false} />
         </div>
-        <p className="sm:text-reg text-sm p-2 text-center w-full">{label}</p>
+        <p className="sm:text-base text-sm p-2 text-center w-full">{label}</p>
       </section>
     );
   }
@@ -29,7 +29,7 @@ const DisplayVideo = ({ label, link, fullpage }: Props) => {
   //         <div className="relative flex flex-col items-center md:w-[80%] w-[95%] aspect-video bg-white rounded-md border-2   ">
   //           <Iframe label={label} link={link} iconSize={28} autoPlay={false} />
   //         </div>
-  //         <p className="sm:text-reg text-sm p-2 text-center w-full">{label}</p>
+  //         <p className="sm:text-base text-sm p-2 text-center w-full">{label}</p>
   //       </section>
   //     );
   //   }
@@ -39,7 +39,7 @@ const DisplayVideo = ({ label, link, fullpage }: Props) => {
   //     <div className="relative flex flex-col items-center sm:w-5/6 w-[96%] bg-white rounded-md border-2 h-[200px] sm:h-[300px] md:h-[400px]">
   //       <Iframe label={label} link={link} iconSize={28} autoPlay={false} />
   //     </div>
-  //     <p className="sm:text-reg text-sm p-4 text-center w-full">{label}</p>
+  //     <p className="sm:text-base text-sm p-4 text-center w-full">{label}</p>
   //   </section>
   // );
 
@@ -48,7 +48,7 @@ const DisplayVideo = ({ label, link, fullpage }: Props) => {
       <div className="relative flex flex-col items-center w-full bg-white rounded-md border-2">
         <Iframex label={label} link={link} iconSize={28} autoPlay={false} />
       </div>
-      <p className="sm:text-reg text-sm p-2 text-center w-full">{label}</p>
+      <p className="sm:text-base text-sm p-2 text-center w-full">{label}</p>
     </section>
   );
 };

@@ -57,7 +57,7 @@ const Products = async () => {
         / <span className="text-slate-500 font-bold">محصولات</span>
       </p>
       <section className="p-6">
-        <h1 className="w-full text-reg font-bold sm:text-reg md:text-xlg my-4 text-center lg:text-2xlg">
+        <h1 className="w-full text-base font-bold sm:text-base md:text-xl my-4 text-center lg:text-2xlg">
           سیروبا بهترین چرخ خیاطی های صنعتی در دنیا
         </h1>
         <p>

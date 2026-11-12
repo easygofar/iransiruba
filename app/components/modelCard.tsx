@@ -42,18 +42,18 @@
 //         />
 //       </div>
 //       <div className="w-full border-t pt-2 border-[#e0e0e0] select-none">
-//         <h2 className="w-full text-center lg:text-reg font-bold group-hover:font-bold">
+//         <h2 className="w-full text-center lg:text-base font-bold group-hover:font-bold">
 //           {title}
 //         </h2>
 //       </div>
 //       <div className="w-full pb-2 select-none">
-//         <h2 className="w-full text-center sm:text-reg text-sm group-hover:font-bold">
+//         <h2 className="w-full text-center sm:text-base text-sm group-hover:font-bold">
 //           {` چرخ ${sub_category}`}
 //         </h2>
 //       </div>
 
 //       <div className="w-full pb-2 select-none flex flex-col justify-between grow">
-//         <div className="w-full text-center sm:text-reg text-sm group-hover:font-bold flex flex-wrap justify-center">
+//         <div className="w-full text-center sm:text-base text-sm group-hover:font-bold flex flex-wrap justify-center">
 //           {details
 //             ? details.split("-").map((p, index) => (
 //               <span

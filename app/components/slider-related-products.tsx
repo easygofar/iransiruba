@@ -42,7 +42,7 @@ export default function SliderRelatedProducts(params: { models: IfModelType[] })
                             }.webp`}
                             className="w-40 text-center m-auto"
                             alt={model.sub_category} />
-                        <p className="text-center text-xm">{model.title}</p>
+                        <p className="text-center text-xs">{model.title}</p>
                         <p className="text-center text-sm leading-5">{model.sub_category}</p>
                     </SwiperSlide>
 

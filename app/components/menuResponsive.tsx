@@ -287,7 +287,7 @@ const MenuResponsive = () => {
               }
             }}
             onMouseOver={handleOnHoverMainMenu}
-            className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm sm:text-reg lg:text-lg md:border-none mx-1 sm:min-w-20 min-w-37.5 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
+            className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm md:text-base md:border-none mx-1 min-w-37.5 sm:min-w-25 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
           >
             خانه
           </li>
@@ -326,7 +326,7 @@ const MenuResponsive = () => {
               }
             }}
             onMouseOver={handleOnHoverMainMenu}
-            className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm sm:text-reg lg:text-lg md:border-none mx-1 sm:min-w-20 min-w-37.5 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
+            className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm md:text-base md:border-none mx-1 min-w-37.5 sm:min-w-25 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
           >
             کاتالوگ‌ها
           </li>
@@ -340,7 +340,7 @@ const MenuResponsive = () => {
               }
             }}
             onMouseOver={handleOnHoverMainMenu}
-            className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm sm:text-reg lg:text-lg md:border-none mx-1 sm:min-w-20 min-w-37.5 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
+            className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm md:text-base md:border-none mx-1 min-w-37.5 sm:min-w-25 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
           >
             پشتیبانی
           </li>
@@ -354,7 +354,7 @@ const MenuResponsive = () => {
               }
             }}
             onMouseOver={handleOnHoverMainMenu}
-            className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm sm:text-reg lg:text-lg md:border-none mx-1 sm:min-w-20 min-w-37.5 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
+            className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm md:text-base md:border-none mx-1 min-w-37.5 sm:min-w-25 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
           >
             تماس
           </li>

@@ -21,7 +21,7 @@ const CustomerCareImage = ({ title }: Props) => {
         alt={`${title} image`}
       />
       <div className="absolute top-1 right-1 sm:top-2 sm:right:2 sm:font-bold">
-        <h1 className="text-xm sm:text-reg md:text-lg">ایران سیروبا</h1>
+        <h1 className="text-xs sm:text-base md:text-lg">ایران سیروبا</h1>
       </div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold">
         <p className="md:text-[3rem] sm:text-[2rem] text-[1.3rem] text-nowrap">

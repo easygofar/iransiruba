@@ -36,7 +36,7 @@ function MenuItemAndSubmenu({
     <li
       onClick={(e) => handleMenu(e, "0")}
       onMouseOver={handleOnHoverMainMenu}
-      className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm sm:text-reg lg:text-lg md:border-none mx-1 sm:min-w-25 min-w-37.5 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
+      className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm md:text-base md:border-none mx-1 min-w-37.5 sm:min-w-25 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
     >
       {/* main menu name like محصولات or سیروبا */}
       {menuMainName}
@@ -65,7 +65,7 @@ function MenuItemAndSubmenu({
               <Link
                 onClick={(e) => handleMenu(e, "1", 1)}
                 onMouseOver={handleProductMouseOver}
-                className="hidden md:block w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg"
+                className="hidden md:block w-full h-full md:px-4 px-2 text-sm"
                 href={`${m.models.length > 1
                   ? m.sub_menu_url + "/" + getCategory(m.category)
                   : m.sub_menu_url +
@@ -80,14 +80,14 @@ function MenuItemAndSubmenu({
             ) : (
               <span
                 onMouseOver={handleProductMouseOver}
-                className="hidden md:block w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg"
+                className="hidden md:block w-full h-full md:px-4 px-2 text-sm"
               >
                 {m.farsi}
               </span>
             )}
 
             {/* *** MOBILE LINK **** */}
-            <div className="md:hidden w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg flex items-center z-40">
+            <div className="md:hidden w-full h-full md:px-4 px-2 text-sm flex items-center z-40">
               {m.models.length > 1 ? (
                 <div className="flex items-center justify-between w-full">
                   {m.brand === "nolink" ? (
@@ -119,7 +119,7 @@ function MenuItemAndSubmenu({
                     closeMainMobileMenu();
                     setIsOpen(false);
                   }}
-                  className="block w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg"
+                  className="block w-full h-full md:px-4 px-2 text-sm"
                   href={`${m.models.length > 1
                     ? m.sub_menu_url + "/" + getCategory(m.category)
                     : m.sub_menu_url +
@@ -162,20 +162,20 @@ function MenuItemAndSubmenu({
                           }}
                           href={`${m.sub_menu_url}/${getCategory(m.category)}/${model.title
                             }`}
-                          className={`leading-normal block w-full h-full mx-4 text-xs sm:text-reg lg:text-lg font-normal hover:text-blue-500`}
+                          className={`leading-normal block w-full h-full mx-4 text-xs md:text-[13px] font-normal hover:text-blue-500`}
                         // dangerouslySetInnerHTML={{
                         //   __html: model.sub_category,
                         // }}
                         >
                           <span className="p-0 m-0">{model.sub_category}</span>
                           {model.menu_note ? (
-                            <span className="text-xm md:text-sm text-[#FA461E] p-0 m-0">
+                            <span className="text-xs md:text-sm text-[#FA461E] p-0 m-0">
                               {" "}
                               ({model.title}){" "}
                             </span>
                           ) : null}
 
-                          {/* <p className="text-xm sm:text-sm text-[#FA461E] p-0 m-0">
+                          {/* <p className="text-xs sm:text-sm text-[#FA461E] p-0 m-0">
                             {model.title}
                           </p> */}
                         </Link>

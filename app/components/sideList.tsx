@@ -18,7 +18,7 @@
 // 	return (
 // 		<nav aria-label="Sidebar Menu" className="hidden lg:block">
 // 			<div className="flex flex-col flex-wrap justify-center items-center bg-slate-200 pb-2 drop-shadow rounded-lg rounded-b-none">
-// 				<h2 className="w-full text-center p-2 rounded-t-lg font-bold text-sm sm:text-reg md:text-lg bg-slate-200 mb-2">
+// 				<h2 className="w-full text-center p-2 rounded-t-lg font-bold text-sm sm:text-base md:text-lg bg-slate-200 mb-2">
 // 					چرخ خیاطی‌های صنعتی سیروبا
 // 				</h2>
 // 				<ul className="flex flex-wrap w-full justify-around">
@@ -33,7 +33,7 @@
 // 								className={`
 // 								flex items-center justify-centershadow-sm  
 // 								text-sm text-center rounded-md px-2 my-[3px]  
-// 								sm:text-reg md:py-[4px] mx-1 w-1/3 grow    
+// 								sm:text-base md:py-[4px] mx-1 w-1/3 grow    
 // 								hover:ring-slate-300 hover:bg-red-500/25  
 // 								hover:cursor-pointer transition
 // 								${bgSelectedToggle}`}

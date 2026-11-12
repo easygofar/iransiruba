@@ -72,15 +72,15 @@ const History = () => {
             alt="شهر تهران"
           />
           <div className="absolute top-1 right-1 sm:top-2 sm:right:2 sm:font-bold">
-            <h1 className="text-xm sm:text-reg md:text-lg">ایران سیروبا</h1>
+            <h1 className="text-xs sm:text-base md:text-lg">ایران سیروبا</h1>
           </div>
         </section>
         <div className="sm:px-6 py-6 p-[2px]">
           <section className="md:my-8 sm:my-4 my-2">
-            <h1 className="text-reg font-bold sm:text-reg md:text-xlg my-4">
+            <h1 className="text-base font-bold sm:text-base md:text-xl my-4">
               تاریخ شرکت سیروبا
             </h1>
-            <div className="relative text-reg overflow-hidden lg:text-lg my-4 sm:px-4 p-[2px] py-8 sm:bg-slate-200/50 bg-slate-200/75 rounded-lg border">
+            <div className="relative text-base overflow-hidden lg:text-lg my-4 sm:px-4 p-[2px] py-8 sm:bg-slate-200/50 bg-slate-200/75 rounded-lg border">
               <span className="absolute top-[10px] left-[20px] sm:left-[50%] sm:translate-x-[-50%] w-[2px] h-full bg-[#FA805B]/75"></span>
               {renderHistoryElements}
             </div>

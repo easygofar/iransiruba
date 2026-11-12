@@ -55,16 +55,16 @@ const HomePage = () => {
         </h1>
         <section className="pb-6">
           <article className="md:my-8 sm:my-4 my-2">
-            <h2 className="text-reg font-bold sm:text-reg md:text-xlg my-4">
+            <h2 className="text-base font-bold sm:text-base md:text-xl my-4">
               سیروبا، چرخ خیاطی‌های صنعتی با تمرکز بر کیفیت و نوآوری
             </h2>
-            <p className="text-reg lg:text-lg my-4">
+            <p className="text-base lg:text-lg my-4">
               نام برند سیروبا یکی از بهترین و خوشنام ترین برند
               <em> چرخ خیاطی صنعتی </em>
               دنیاست. با تاسیس شرکت تولیدی کائولین در سال 1965 میلادی، طراحی و
               ساخت چرخ خياطي های صنعتی با برند سیروبا شکل گرفت.
             </p>
-            <p className="text-reg lg:text-lg my-4">
+            <p className="text-base lg:text-lg my-4">
               سیروبا با رعایت استانداردهای بالای کیفیت، آموزش جامع و همکاری در
               انتقال دانش فنی، پیشتاز در بین شرکت های مبتنی بر تحقیق و پژوهش است.
               سیروبا با تکیه بر بخش &quot;تحقیق و توسعه &quot; چرخ خیاطی های خود
@@ -77,17 +77,17 @@ const HomePage = () => {
               className={`relative w-full aspect-[16/6] bg-top bg-cover bg-[url("../public/webp_siruba-industrial-sewing-machine.webp")]`}
             >
               <div className="absolute top-1 right-1 sm:top-2 sm:right:2 sm:font-bold">
-                <h2 className="text-xm sm:text-reg md:text-lg">ایران سیروبا</h2>
+                <h2 className="text-xs sm:text-base md:text-lg">ایران سیروبا</h2>
               </div>
             </section>
           </div>
 
           <article className="md:my-8 sm:my-4 my-2">
-            <h2 className="text-reg font-bold sm:text-reg md:text-xlg my-4">
+            <h2 className="text-base font-bold sm:text-base md:text-xl my-4">
               چرا سیروبا بهترین گزینه برای خرید <em> چرخ خیاطی صنعتی </em> است؟
             </h2>
 
-            <p className="text-reg lg:text-lg my-4">
+            <p className="text-base lg:text-lg my-4">
               با تمرکز بر کیفیت، مهندسین و طراحان<em> چرخ خیاطی صنعتی </em> سیروبا
               می‌توانند چالش‌های روز بازار را درک کرده و برای آن‌ها راه‌حل مناسب
               پیدا کنند. تعهد سیروبا بر توسعه چرخ خیاطی های صنعتی بهتر برای برآورد
@@ -100,17 +100,17 @@ const HomePage = () => {
             </p>
           </article>
           <article className="md:my-8 sm:my-4 my-1">
-            <h2 className="text-reg font-bold sm:text-reg md:text-xlg my-4">
+            <h2 className="text-base font-bold sm:text-base md:text-xl my-4">
               شرکت
               <span className="text-red-600"> قطعه سازان چرخ دوخت نماینده </span>
               نمایندگی انحصاری سیروبا در ایران
             </h2>
-            <p className="text-reg lg:text-lg my-4">
+            <p className="text-base lg:text-lg my-4">
               شرکت قطعه سازان چرخ دوخت نماینده انحصاری برند معتبر سیروبا در ایران
               است. سیروبا یکی از پیشروان تولید <em> چرخ خياطي صنعتي </em> با کیفیت
               و نوآوری در جهان محسوب می‌شود.
             </p>
-            <p className="text-reg lg:text-lg my-4">
+            <p className="text-base lg:text-lg my-4">
               شرکت قطعه سازان چرخ دوخت با ارائه 26 مدل <em>چرخ اطی صنعتی</em>{" "}
               سیروبا در{" "}
               <a className="internal_link" href="/products/">
@@ -122,7 +122,7 @@ const HomePage = () => {
               هستید، سیروبا را انتخاب کنید.
             </p>
 
-            <p className="text-reg lg:text-lg my-4">
+            <p className="text-base lg:text-lg my-4">
               برای مشاوره و خرید با دفتر مرکزی شرکت قطعه سازان چرخ دوخت در تهران{" "}
               <a className="internal_link" href="/contact/">
                 تماس

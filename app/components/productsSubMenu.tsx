@@ -35,7 +35,7 @@ export default async function ProductSubMenu({
       <Link
         onClick={(e) => handleMenu(e, "1", 1)}
         onMouseOver={handleProductMouseOver}
-        className="hidden md:block w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg"
+        className="hidden md:block w-full h-full md:px-4 px-2 text-sm"
         href={`/products/${m.models.length > 1
           ? getCategory(m.category)
           : getCategory(m.category) + "/" + m.models[0].title
@@ -45,7 +45,7 @@ export default async function ProductSubMenu({
       </Link>
 
       {/* *** MOBILE LINK **** */}
-      <div className="md:hidden w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg flex items-center z-40">
+      <div className="md:hidden w-full h-full md:px-4 px-2 text-sm flex items-center z-40">
         {m.models.length > 1 ? (
           <div className="flex items-center justify-between w-full">
             <Link
@@ -76,7 +76,7 @@ export default async function ProductSubMenu({
               closeMainMobileMenu();
               setIsOpen(false);
             }}
-            className="block w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg"
+            className="block w-full h-full md:px-4 px-2 text-sm"
             href={`/products/${m.models.length > 1
               ? getCategory(m.category)
               : getCategory(m.category) + "/" + m.models[0].title
@@ -108,7 +108,7 @@ export default async function ProductSubMenu({
                     setIsOpen(false);
                   }}
                   href={`/products/${getCategory(m.category)}/${sub.title}`}
-                  className="block w-full h-full mx-4 text-sm sm:text-reg lg:text-lg font-normal"
+                  className="block w-full h-full mx-4 text-xs md:text-[13px] font-normal"
                 >
                   {sub.sub_category}
                 </Link>
