@@ -24,14 +24,14 @@ const RightElement = ({
 				<div className="work-con absolute sm:top-0 top-[7px] sm:left-[50%] left-[3px] sm:translate-x-[-50%] sm:w-[49px] sm:h-[49px] w-[32px] h-[32px] rounded-full bg-[#F9461C] flex justify-center items-center ring-[1px] ring-offset-2 ring-offset-blue z-[50]">
 					<CalendarIcon />
 					{/* year */}
-					<span className="absolute text-shadow top-[50%] text-sm sm:text-base translate-y-[-50%] z-[30]  sm:left-[-60px] left-[38px] font-bold text-base select-none">
+					<span className="absolute text-shadow top-[50%] text-sm sm:text-reg translate-y-[-50%] z-[30]  sm:left-[-60px] left-[38px] font-bold text-reg select-none">
 						{year}
 					</span>
 				</div>
 
 				{/* content */}
 				<div className="w-full flex justify-start">
-					<section className="relative top-0 sm:w-[40%] w-[70%] rounded-md sm:rounded-lg drop-shadow-lg text-base leading-6 bg-[#fff] border-[1px] sm:p-4 p-[6px] md:px-8">
+					<section className="relative top-0 sm:w-[40%] w-[70%] rounded-md sm:rounded-lg drop-shadow-lg text-reg leading-6 bg-[#fff] border-[1px] sm:p-4 p-[6px] md:px-8">
 						{<ContentList>{children}</ContentList>}
 					</section>
 				</div>

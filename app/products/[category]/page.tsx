@@ -132,7 +132,7 @@ const ProductCategory = async ({
 
   return (
     <>
-      <h1 className="w-full p-1 sm:p-3 font-bold text-center bg-[#FA461C] text-sm sm:text-lg lg:text-xl text-white rounded-md">{`${machineType} ${machine[0].farsi} سیروبا`}</h1>
+      <h1 className="w-full p-1 sm:p-3 font-bold text-center bg-[#FA461C] text-sm sm:text-lg lg:text-xlg text-white rounded-md">{`${machineType} ${machine[0].farsi} سیروبا`}</h1>
       <Pathname machines={machines} />
       <section className="flex sm:flex-row flex-col min-h-screen sm:my-10 my-2 w-full">
         <section className="hidden lg:block w-full lg:w-1/3 pb-1 px-2 sm:px-4 sm:mb-1 mb-2 rounded-lg">
@@ -146,10 +146,10 @@ const ProductCategory = async ({
         <section className="sm:px-4 md:w-full">
           {machine[0].general_description.length ? (
             <section className="sm:mb-8 mb-4">
-              <h2 className="font-bold text-sm sm:text-base pb-4">توضیحات</h2>
+              <h2 className="font-bold text-sm sm:text-reg pb-4">توضیحات</h2>
               {machine[0].general_description.map(
                 (text: string, index: number) => (
-                  <p key={index} className="text-sm sm:text-base pb-4">
+                  <p key={index} className="text-sm sm:text-reg pb-4">
                     {text}
                   </p>
                 )
@@ -164,7 +164,7 @@ const ProductCategory = async ({
                   {title ? (
                     <h2
                       key={index}
-                      className="block w-full sm:p-2 rounded-lg rounded-b-none font-bold bg-slate-200 text-center text-sm sm:text-base p-2"
+                      className="block w-full sm:p-2 rounded-lg rounded-b-none font-bold bg-slate-200 text-center text-sm sm:text-reg p-2"
                     >
                       {title}
                     </h2>

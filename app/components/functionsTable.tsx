@@ -26,25 +26,25 @@ const FunctionsTable = ({ fns }: { fns: string[] }) => {
 						<>
 							<div className="fixed top-0 left-2 flex gap-[4px] justify-center items-center bg-slate-300/50 m-auto sm:p-2 p-[5px] rounded-b-lg z-[500] border-b">
 								<button
-									className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-base text-sm bg-blue-500 shadow rounded-md border-[1px] border-blue-300 hover:bg-blue-600 text-white"
+									className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-reg text-sm bg-blue-500 shadow rounded-md border-[1px] border-blue-300 hover:bg-blue-600 text-white"
 									onClick={() => zoomIn()}
 								>
 									Zoom In
 								</button>
 								<button
-									className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-base text-sm bg-blue-500 shadow rounded-md border-[1px] border-blue-300 hover:bg-blue-600 text-white"
+									className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-reg text-sm bg-blue-500 shadow rounded-md border-[1px] border-blue-300 hover:bg-blue-600 text-white"
 									onClick={() => zoomOut()}
 								>
 									Zoom out
 								</button>
 								<button
-									className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-base text-sm bg-blue-500 shadow rounded-md border-[1px] border-blue-300 hover:bg-blue-600 text-white"
+									className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-reg text-sm bg-blue-500 shadow rounded-md border-[1px] border-blue-300 hover:bg-blue-600 text-white"
 									onClick={() => resetTransform()}
 								>
 									Reset
 								</button>
 								<button
-									className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-base text-sm bg-blue-500 shadow rounded-md border-[1px] border-blue-300 hover:bg-blue-600 text-white"
+									className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-reg text-sm bg-blue-500 shadow rounded-md border-[1px] border-blue-300 hover:bg-blue-600 text-white"
 									onClick={() => setImage("")}
 								>
 									Close

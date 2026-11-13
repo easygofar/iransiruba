@@ -147,7 +147,7 @@ const ModelTitle = async ({
 
   return (
     <>
-      <h1 className="w-full p-1 sm:p-3 font-bold text-center bg-[#FA461C] text-sm sm:text-lg lg:text-xl text-white rounded-md">
+      <h1 className="w-full p-1 sm:p-3 font-bold text-center bg-[#FA461C] text-sm sm:text-lg lg:text-xlg text-white rounded-md">
         {category_title === "" ? ` چرخ خیاطی صنعتی ` : ` دستگاه `} {sub_category} سیروبا
       </h1>
       <Pathname machines={machines} />
@@ -175,11 +175,11 @@ const ModelTitle = async ({
           )}
 
           <article className="my-2">
-            <h2 className="text-base font-bold sm:text-base md:text-xl my-4">
+            <h2 className="text-reg font-bold sm:text-reg md:text-xlg my-4">
               {`${sub_category} ${title}`}
             </h2>
             <p
-              className="text-base lg:text-lg my-4 select-none"
+              className="text-reg lg:text-lg my-4 select-none"
               dangerouslySetInnerHTML={{ __html: description }}
               suppressHydrationWarning
             />

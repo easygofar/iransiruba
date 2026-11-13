@@ -258,7 +258,7 @@ img {
 }
 
 .porduct-details {
-  @apply overflow-hidden;
+  @apply overflow-visible;
 }
 
 .internal_link {

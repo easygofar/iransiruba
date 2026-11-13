@@ -39,14 +39,14 @@ const DownloadResources = async ({ category, model }: Props) => {
             key={id}
             className="flex flex-col justify-center w-full items-start md:mt-8 sm:mt-0 mt-4 bg-slate-100 drop-shadow"
           >
-            <h3 className="font-bold w-full px-2 bg-slate-200 rounded-t-md text-center text-sm sm:text-base">
+            <h3 className="font-bold w-full px-2 bg-slate-200 rounded-t-md text-center text-sm sm:text-reg">
               {title}
             </h3>
-            <ul className="text-sm sm:pr-8 pr-4 mt-2 w-full sm:text-base">
+            <ul className="text-sm sm:pr-8 pr-4 mt-2 w-full sm:text-reg">
               {downloads.map((d) => (
                 <li
                   key={d.label}
-                  className="flex items-center flex-row hover:text-blue-500 text-sm sm:text-base"
+                  className="flex items-center flex-row hover:text-blue-500 text-sm sm:text-reg"
                 >
                   <span className="ml-2  flex h-full w-full items-center p-0">
                     <FileDownload />

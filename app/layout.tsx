@@ -58,7 +58,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html
       lang="fa"
       dir="rtl"
-      className={`${myFont.className} text-right text-base antialiased`}
+      className={`${myFont.className} text-right text-reg antialiased`}
     >
       <head>
         <link

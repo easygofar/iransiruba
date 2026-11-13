@@ -71,7 +71,7 @@ const renderMachineSections = async () => {
         key={m.id}
         className="w-full mb-4 sm:mb-16 flex-1 flex flex-col justify-center overflow-hidden items-around border rounded-t-md border-[#FA461E]"
       >
-        <h2 className="font-bold w-full text-sm sm:text-base flex-1 text-center p-2 bg-slate-100 border-b border-slate-300">
+        <h2 className="font-bold w-full text-sm sm:text-reg flex-1 text-center p-2 bg-slate-100 border-b border-slate-300">
           <Link
             className="w-full h-full hover:text-blue-500"
             href={`/products/${getCategory(m.category)}`}
@@ -101,7 +101,7 @@ const renderMachineSections = async () => {
 
               >
                 <div className="flex flex-col bg-slate-200 w-full p-2 sm:mb-4 mb-2 rounded-t-md">
-                  <span className="mx-1 font-bold text-center text-sm sm:text-base">
+                  <span className="mx-1 font-bold text-center text-sm sm:text-reg">
                     <Link
                       className="w-full h-full hover:text-blue-500"
                       href={`/products/${getCategory(m.category) + "/" + mo.title
@@ -110,7 +110,7 @@ const renderMachineSections = async () => {
                       {mo.sub_category}
                     </Link>
                   </span>
-                  <span className="mx-1 font-bold text-center text-sm sm:text-base">
+                  <span className="mx-1 font-bold text-center text-sm sm:text-reg">
                     {/* {mo.title} */}
                     <Link
                       className="w-full h-full hover:text-blue-500"
@@ -124,10 +124,10 @@ const renderMachineSections = async () => {
                 {resources.map((text, index) => (
                   <span
                     key={index}
-                    className="relative group mr-4 w-[90%] text-blue-500 hover:underline cursor-pointer text-base hover:font-bold flex items-end"
+                    className="relative group mr-4 w-[90%] text-blue-500 hover:underline cursor-pointer text-reg hover:font-bold flex items-end"
                   >
                     <span className="absolute -top-1.25 duration-200 transiton-all group-hover:-top-0.5 -right-2 inline-block group-hover:after:content-['\2193'] text-[#fa461e]"></span>
-                    <span className="text-sm sm:text-base">{text}</span>
+                    <span className="text-sm sm:text-reg">{text}</span>
                   </span>
                 ))}
               </li>
@@ -160,21 +160,21 @@ const Downloads = () => {
           alt="download icon"
         />
         <div className="absolute top-1 right-1 sm:top-2 sm:right:2 sm:font-bold">
-          <h1 className="text-xs sm:text-base md:text-lg">ایران سیروبا</h1>
+          <h1 className="text-xm sm:text-reg md:text-lg">ایران سیروبا</h1>
         </div>
       </section>
 
       <section className="p-4 md:p-8">
-        <h1 className="w-full py-4 font-bold text-right text-base md:text-lg lg:text-xl">
+        <h1 className="w-full py-4 font-bold text-right text-reg md:text-lg lg:text-xlg">
           کاتالوگ، دستورالعمل و لیست قطعات
         </h1>
-        <p className="text-sm sm:text-base">
+        <p className="text-sm sm:text-reg">
           این بخش شامل دانلود کاتالوگ، دستورالعمل و لیست قطعات برای چرخ خیاطی
           های صنعتی موجود در لیست محصولات سایت است. با استفاده از این منابع به
           فرمت فایل های PDF، می‌توانید اطلاعات دقیق‌تری درباره هر چرخ خیاطی
           سیروبا کسب کنید.{" "}
         </p>
-        <p className="text-sm sm:text-base">
+        <p className="text-sm sm:text-reg">
           برای پاسخگویی به سئوالات خود با شرکت ایران سیروبا&nbsp;
           <a className="internal_link" href="/contact/">
             تماس

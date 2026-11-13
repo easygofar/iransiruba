@@ -124,15 +124,15 @@ const RegisterComplaintsClient = () => {
 			<div className="sm:p-4 p-[2px]">
 				{emailSent ? (
 					<section className="sm:my-4 my-[2px]">
-						<h2 className="text-base font-bold sm:text-base md:text-xl my-4">
+						<h2 className="text-reg font-bold sm:text-reg md:text-xlg my-4">
 							ثبت شکایات
 						</h2>
 						<hr color="red" />
-						<div className="relative text-base h-screen sm:my-4 my-2 sm:mt-8 mt-4 flex flex-col items-center w-full flex-wrap px-2 md:px-0">
-							<p className="text-base lg:text-lg my-4 text-center p-2">
+						<div className="relative text-reg h-screen sm:my-4 my-2 sm:mt-8 mt-4 flex flex-col items-center w-full flex-wrap px-2 md:px-0">
+							<p className="text-reg lg:text-lg my-4 text-center p-2">
 								ثبت شکایت شما انجام شد.
 							</p>
-							<p className="text-base lg:text-lg text-center p-2">
+							<p className="text-reg lg:text-lg text-center p-2">
 								از همکاری شما متشکریم. به زودی با شما تماس می
 								گیریم.
 							</p>
@@ -141,11 +141,11 @@ const RegisterComplaintsClient = () => {
 				) : (
 					<>
 						<section className="sm:my-4 my-[2px]">
-							<h2 className="text-base font-bold sm:text-base md:text-xl my-4">
+							<h2 className="text-reg font-bold sm:text-reg md:text-xlg my-4">
 								ثبت شکایات
 							</h2>
-							<div className="relative text-base sm:my-4 my-2 sm:mt-8 mt-4 flex sm:justify-bwetween sm:items-stretch w-full flex-wrap px-2 md:px-0"></div>
-							<p className="text-base lg:text-lg my-4">
+							<div className="relative text-reg sm:my-4 my-2 sm:mt-8 mt-4 flex sm:justify-bwetween sm:items-stretch w-full flex-wrap px-2 md:px-0"></div>
+							<p className="text-reg lg:text-lg my-4">
 								درصورت بروز هرگونه مشکل می توانید با تکمیل فرم
 								زیر ما را در جریان قرار دهید. این اطمینان را به
 								شما می دهیم موارد اعلامی شما به دقت ارزیابی شده
@@ -190,7 +190,7 @@ const RegisterComplaintsClient = () => {
 									data={formInfo}
 								/>
 
-								<p className="text-base lg:text-lg my-4">
+								<p className="text-reg lg:text-lg my-4">
 									مشخصات محصول
 								</p>
 								<hr color="red" />
@@ -237,7 +237,7 @@ const RegisterComplaintsClient = () => {
 								<div className="my-4 md:p-10">
 									<button
 										onClick={handleOnSubmit}
-										className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-base text-sm bg-teal-500 shadow rounded-md border-[1px] border-teal-300 hover:bg-teal-600 text-white"
+										className="sm:px-4 sm:py-2 px-[10px] py-[5px] sm:text-reg text-sm bg-teal-500 shadow rounded-md border-[1px] border-teal-300 hover:bg-teal-600 text-white"
 									>
 										ثبت شکایت
 									</button>

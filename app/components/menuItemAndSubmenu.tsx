@@ -36,7 +36,7 @@ function MenuItemAndSubmenu({
     <li
       onClick={(e) => handleMenu(e, "0")}
       onMouseOver={handleOnHoverMainMenu}
-      className={`relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm md:text-base md:border-none mx-1 min-w-37.5 sm:min-w-25 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
+      className={`group/menuitem relative border-slate-200 border-b bg-white md:bg-transparent p-2 text-sm sm:text-reg lg:text-lg md:border-none mx-1 sm:min-w-25 min-w-37.5 px-2 flex md:justify-center justify-start items-center cursor-pointer`}
     >
       {/* main menu name like محصولات or سیروبا */}
       {menuMainName}
@@ -49,14 +49,14 @@ function MenuItemAndSubmenu({
         onMouseOver={(e) => e.stopPropagation()}
         className={`absolute submenu menu-shadow
           group-hover-block animate-fade-in 
-          sm:min-w-62.5 min-w-45 flex flex-col md:top-17 w-full top-7.5 md:right-[50%] md:translate-x-[50%] 
-          md:border-2 border-slate-300 right-[50%] bg-slate-200/50 rounded-md p-0 hidden z-100`}
+          sm:min-w-62.5 min-w-45 flex-col md:top-full w-full top-7.5 md:right-[50%] md:translate-x-[50%] 
+          md:border-2 border-slate-300 right-[50%] bg-white/95 backdrop-blur-md rounded-md p-0 hidden md:group-hover/menuitem:flex z-100`}
       >
         {sortBy(menuData, ["id"]).map((m: any) => (
           <li
             key={m.id}
-            className={`table border-b border-slate-200 py-[0.2rem] bg-white hover:bg-slate-200 hover:font-bold ${m.models.length > 1
-              ? "relative md:hover:border-t-slate-200 hover:border-t-slate-300 "
+            className={`table border-b border-slate-200 py-[0.2rem] bg-white hover:bg-slate-100 hover:font-bold ${m.models.length > 1
+              ? "group/productrow relative md:hover:border-t-slate-200 hover:border-t-slate-300 "
               : ""
               }`}
           >
@@ -65,7 +65,7 @@ function MenuItemAndSubmenu({
               <Link
                 onClick={(e) => handleMenu(e, "1", 1)}
                 onMouseOver={handleProductMouseOver}
-                className="hidden md:block w-full h-full md:px-4 px-2 text-sm"
+                className="hidden md:block w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg"
                 href={`${m.models.length > 1
                   ? m.sub_menu_url + "/" + getCategory(m.category)
                   : m.sub_menu_url +
@@ -80,14 +80,14 @@ function MenuItemAndSubmenu({
             ) : (
               <span
                 onMouseOver={handleProductMouseOver}
-                className="hidden md:block w-full h-full md:px-4 px-2 text-sm"
+                className="hidden md:block w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg"
               >
                 {m.farsi}
               </span>
             )}
 
             {/* *** MOBILE LINK **** */}
-            <div className="md:hidden w-full h-full md:px-4 px-2 text-sm flex items-center z-40">
+            <div className="md:hidden w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg flex items-center z-40">
               {m.models.length > 1 ? (
                 <div className="flex items-center justify-between w-full">
                   {m.brand === "nolink" ? (
@@ -119,7 +119,7 @@ function MenuItemAndSubmenu({
                     closeMainMobileMenu();
                     setIsOpen(false);
                   }}
-                  className="block w-full h-full md:px-4 px-2 text-sm"
+                  className="block w-full h-full md:px-4 px-2 text-sm sm:text-reg lg:text-lg"
                   href={`${m.models.length > 1
                     ? m.sub_menu_url + "/" + getCategory(m.category)
                     : m.sub_menu_url +
@@ -145,15 +145,15 @@ function MenuItemAndSubmenu({
               <div className="md:animate-none">
                 <ul className={`relative md:absolute animate-fade-in-scale 
                   md:animate-fade-in-right porduct-details top-2 md:top-0 
-                  hidden md:mr-0.5 invisible hover:block md:right-full 
-                  md:mb-2 mb-1 drop-shadow md:px-0 pr-2 bg-white 
-                  border-2 md:border-2 md:shadow-md md:border-slate-200 md:rounded-md rounded-sm border-b border-slate-3  00 sm:w-70 w-50 z-100`}>
+                  hidden invisible md:group-hover/productrow:block md:group-hover/productrow:visible md:mr-0.5 md:left-full 
+                  md:mb-2 mb-1 drop-shadow md:px-0 pr-2 bg-white/95 backdrop-blur-md 
+                  border-2 md:border-2 md:shadow-md md:border-slate-300 md:rounded-md rounded-sm border-b sm:w-70 w-50 z-100`}>
                   {sortBy(m.models, ["id"]).map((model: any) => {
                     return (
                       <li
                         key={model.id}
                         className={`${model.sub_category == "" ? "hidden" : "block"
-                          } border-b border-slate-300 py-[0.15rem] sm:py-1 hover:block w-full bg-white hover:bg-slate-200/75`}
+                          } border-b border-slate-300 py-[0.15rem] sm:py-1 hover:block w-full bg-white hover:bg-slate-100`}
                       >
                         <Link
                           onClick={() => {
@@ -162,20 +162,20 @@ function MenuItemAndSubmenu({
                           }}
                           href={`${m.sub_menu_url}/${getCategory(m.category)}/${model.title
                             }`}
-                          className={`leading-normal block w-full h-full mx-4 text-xs md:text-[13px] font-normal hover:text-blue-500`}
+                          className={`leading-normal block w-full h-full mx-4 text-xs sm:text-reg lg:text-lg font-normal hover:text-blue-500`}
                         // dangerouslySetInnerHTML={{
                         //   __html: model.sub_category,
                         // }}
                         >
                           <span className="p-0 m-0">{model.sub_category}</span>
                           {model.menu_note ? (
-                            <span className="text-xs md:text-sm text-[#FA461E] p-0 m-0">
+                            <span className="text-xm md:text-sm text-[#FA461E] p-0 m-0">
                               {" "}
                               ({model.title}){" "}
                             </span>
                           ) : null}
 
-                          {/* <p className="text-xs sm:text-sm text-[#FA461E] p-0 m-0">
+                          {/* <p className="text-xm sm:text-sm text-[#FA461E] p-0 m-0">
                             {model.title}
                           </p> */}
                         </Link>
